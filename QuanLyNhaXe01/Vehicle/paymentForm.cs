@@ -20,9 +20,9 @@ namespace QuanLyNhaXe01
         }
         Vehicle vehicle = new Vehicle();
 
-       private string id;
-       
-        public paymentForm(string ID):this()
+        private string id;
+
+        public paymentForm(string ID) : this()
         {
             id = ID;
         }
@@ -38,24 +38,47 @@ namespace QuanLyNhaXe01
                 labelCardID.Text = table.Rows[0]["MaTheXe"].ToString();
                 labelTypeOfVehicle.Text = table.Rows[0]["LoaiXe"].ToString();
                 labelInTime.Text = table.Rows[0]["ThoiGianVao"].ToString();
-                
 
-                byte[] pic = (byte[])table.Rows[0]["AnhXe"];
-                MemoryStream AnhXe = new MemoryStream(pic);
-                pictureBoxVehiclePicture.Image = Image.FromStream(AnhXe);
+
+                //byte[] pic = (byte[])table.Rows[0]["AnhXe"];
+                //MemoryStream AnhXe = new MemoryStream(pic);
+                //pictureBoxVehiclePicture.Image = Image.FromStream(AnhXe);
 
             }
 
-           // DateTime time = DateTime.Parse(labelInTime.Text);
-            
-  
+            // DateTime time = DateTime.Parse(labelInTime.Text);
+
+
         }
 
-       
+
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonPay_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string CardID = labelCardID.Text.Trim();
+                if (MessageBox.Show("Do you want to pay this vehicle?", "Pay", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (vehicle.updateVehicleOut(CardID))
+                    {
+                        MessageBox.Show("Pay sucessful!", "Pay", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can't Pay", "Pay", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Pay", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

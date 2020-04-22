@@ -190,6 +190,7 @@
             this.buttonPay.TabIndex = 32;
             this.buttonPay.Text = "Pay";
             this.buttonPay.UseVisualStyleBackColor = false;
+            this.buttonPay.Click += new System.EventHandler(this.buttonPay_Click);
             // 
             // panel1
             // 

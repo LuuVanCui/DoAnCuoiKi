@@ -59,5 +59,11 @@ namespace QuanLyNhaXe01
             editVehiclesForm editForm = new editVehiclesForm();
             editForm.Show(this);
         }
+
+        private void revenueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            revenueForm revenue = new revenueForm();
+            revenue.Show(this);
+        }
     }
 }

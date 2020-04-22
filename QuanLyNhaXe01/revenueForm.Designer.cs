@@ -48,7 +48,8 @@
             this.dataGridViewShowData.RowTemplate.Height = 28;
             this.dataGridViewShowData.Size = new System.Drawing.Size(1233, 402);
             this.dataGridViewShowData.TabIndex = 0;
-             // 
+            this.dataGridViewShowData.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridViewShowData_DataError);
+            // 
             // buttonShowVehicles
             // 
             this.buttonShowVehicles.Location = new System.Drawing.Point(304, 133);
@@ -57,6 +58,7 @@
             this.buttonShowVehicles.TabIndex = 1;
             this.buttonShowVehicles.Text = "Show Vehicles";
             this.buttonShowVehicles.UseVisualStyleBackColor = true;
+            this.buttonShowVehicles.Click += new System.EventHandler(this.buttonShowVehicles_Click);
             // 
             // buttonShowRevenue
             // 
@@ -75,6 +77,7 @@
             this.buttonExport.TabIndex = 1;
             this.buttonExport.Text = "Export";
             this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
             // buttonPrint
             // 
@@ -84,7 +87,8 @@
             this.buttonPrint.TabIndex = 1;
             this.buttonPrint.Text = "Print";
             this.buttonPrint.UseVisualStyleBackColor = true;
-           // 
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(464, 32);
@@ -125,6 +129,7 @@
             this.Name = "revenueForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "revenueForm";
+            this.Load += new System.EventHandler(this.revenueForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
