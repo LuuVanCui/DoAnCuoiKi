@@ -54,12 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Change.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Change.Designer.cs">
-      <DependentUpon>Change.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Caculate.cs" />
     <Compile Include="DataSetQuanLyNhaXe.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,11 +81,11 @@
     <Compile Include="revenueForm.Designer.cs">
       <DependentUpon>revenueForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test.cs">
+    <Compile Include="SetupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
+    <Compile Include="SetupForm.Designer.cs">
+      <DependentUpon>SetupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle\addVehicleForm.cs">
       <SubType>Form</SubType>
@@ -154,8 +149,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
+    <EmbeddedResource Include="SetupForm.resx">
+      <DependentUpon>SetupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\addVehicleForm.resx">
       <DependentUpon>addVehicleForm.cs</DependentUpon>
