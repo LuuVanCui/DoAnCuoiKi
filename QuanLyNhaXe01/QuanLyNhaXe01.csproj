@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caculate.cs" />
     <Compile Include="DataSetQuanLyNhaXe.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +81,15 @@
     <Compile Include="revenueForm.Designer.cs">
       <DependentUpon>revenueForm.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="SetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupForm.Designer.cs">
+      <DependentUpon>SetupForm.cs</DependentUpon>
+    </Compile>
+>>>>>>> a599f1ca29918081cfd348b316e8312c1740d4df
     <Compile Include="Vehicle\addVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +152,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="revenueForm.resx">
       <DependentUpon>revenueForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="SetupForm.resx">
+      <DependentUpon>SetupForm.cs</DependentUpon>
+>>>>>>> a599f1ca29918081cfd348b316e8312c1740d4df
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\addVehicleForm.resx">
       <DependentUpon>addVehicleForm.cs</DependentUpon>
